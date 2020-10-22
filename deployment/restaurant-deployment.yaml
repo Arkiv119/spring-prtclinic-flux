@@ -4,10 +4,10 @@ kind: Deployment
 metadata:
   name: restaurant-deploy
   labels:
-    app: example-app
+    app: restaurant-app
     test: test
   annotations:
-    fluxcd.io/tag.example-app: semver:~1.0
+    fluxcd.io/tag.restaurant-app: semver:~1.0
     fluxcd.io/automated: 'true'
 spec:
   selector:
