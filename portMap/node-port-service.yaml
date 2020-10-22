@@ -1,7 +1,7 @@
 apiVersion: v2
 kind: Service
 metadata:
-  name: my-service
+  name: restaurant-service
   labels:
     app: demo
 spec:
