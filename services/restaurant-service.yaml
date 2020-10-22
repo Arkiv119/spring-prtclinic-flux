@@ -11,5 +11,5 @@ spec:
   ports:
     - protocol: TCP
       name: http
-      port: 90
+      port: 80
       targetPort: 2000
