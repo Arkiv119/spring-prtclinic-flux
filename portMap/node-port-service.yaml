@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: restaurant-service
+  name: restaurant-port-map
   labels:
     app: demo
 spec:
