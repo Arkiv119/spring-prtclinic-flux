@@ -29,7 +29,7 @@ spec:
         image: arkiv119/restaurantapp
         imagePullPolicy: Always
         ports:
-        - containerPort: 2000
+        - containerPort: 80
         # livenessProbe:
         #   httpGet:
         #     path: /status

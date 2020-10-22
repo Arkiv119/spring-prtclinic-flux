@@ -9,6 +9,6 @@ spec:
     app: restaurant-app
   type: NodePort
   ports:
-  - nodePort: 30002
+  - nodePort: 31000
     port: 80
-    targetPort: 2000
+    targetPort: 80
