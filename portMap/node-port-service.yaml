@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: restaurant-port-map
+  name: petclinic-port-map
   labels:
     app: demo
 spec:
   selector:
-    app: restaurant-app
+    app: petclinic-app
   type: NodePort
   ports:
-  - nodePort: 31000
+  - nodePort: 32000
     port: 80
-    targetPort: 80
+    targetPort: 3306
