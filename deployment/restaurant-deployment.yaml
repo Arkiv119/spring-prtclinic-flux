@@ -2,17 +2,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: restaurant-deploy
+  name: petclinic-deploy
   labels:
-    app: restaurant-app
+    app: petclinic-app
     test: test
   annotations:
-    fluxcd.io/tag.restaurant-app: semver:~1.0
+    fluxcd.io/tag.petclinic-app: semver:~1.0
     fluxcd.io/automated: 'true'
 spec:
   selector:
     matchLabels:
-      app: restaurant-app
+      app: petclinic-app
   replicas: 2
   strategy:
     type: RollingUpdate
@@ -22,14 +22,14 @@ spec:
   template:
     metadata:
       labels:
-        app: restaurant-app
+        app: petclinic-app
     spec:
       containers:
-      - name: restaurant-app
-        image: arkiv119/restaurantapp
+      - name: petclinic-app
+        image: nir16r/spring-petclinic
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 3306
         # livenessProbe:
         #   httpGet:
         #     path: /status
